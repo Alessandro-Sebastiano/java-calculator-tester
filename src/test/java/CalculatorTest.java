@@ -6,18 +6,21 @@ public class CalculatorTest {
 
     @Test
     void add() {
-        assertEquals(0, 5 + -5);
+        Calculator calculator = new Calculator();
+        assertEquals(0, calculator.add(5, -5));
     }
 
     @Test
     void subtract() {
-        assertEquals(12, 32 - 20);
+        Calculator calculator = new Calculator();
+        assertEquals(12, calculator.subtract(32, 20));
     }
 
     @Test
     void divide() {
+        Calculator calculator = new Calculator();
         try {
-            assertEquals(2, 12 / 6);
+            assertEquals(2, calculator.divide(12, 6));
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
         }
@@ -25,7 +28,8 @@ public class CalculatorTest {
 
     @Test
     void multiply() {
-        assertEquals(12, 6 * 2);
+        Calculator calculator = new Calculator();
+        assertEquals(12, calculator.multiply(6, 2));
     }
 
 }

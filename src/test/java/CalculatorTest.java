@@ -17,7 +17,7 @@ public class CalculatorTest {
     @Test
     void divide() {
         try {
-            assertEquals(2, 12 / 0);
+            assertEquals(2, 12 / 6);
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
         }
